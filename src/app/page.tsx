@@ -69,8 +69,8 @@ export default function HomePage() {
         ctaHref="/angebote"
         secondaryLabel="Mehr erfahren"
         secondaryHref="#ueber-uns"
-        imageSrc="/images/herdengefuehl.jpg"
-        imageAlt="Schafe auf dem Hof Naturverbunden"
+        imageSrc="/images/hof-photo.jpg"
+        imageAlt="Hof Naturverbunden im Sauerland"
       />
 
       <section id="ueber-uns" className="py-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
