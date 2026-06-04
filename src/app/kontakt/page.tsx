@@ -164,14 +164,14 @@ export default function KontaktPage() {
         <div className="mt-16 rounded-2xl overflow-hidden border border-earth-100">
           <iframe
             title="Karte Hof Naturverbunden"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=7.94%2C51.14%2C8.02%2C51.19&layer=mapnik&marker=51.163%2C7.975"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=7.94%2C51.14%2C8.02%2C51.19&layer=mapnik&marker=51.182%2C8.030"
             className="w-full h-64 sm:h-80"
             loading="lazy"
           />
           <div className="p-3 bg-earth-50 text-xs text-earth-400 text-center">
             Riedmeckerstraße 1, 57413 Finnentrop-Deutmecke ·{" "}
             <a
-              href="https://www.openstreetmap.org/?mlat=51.163&mlon=7.975#map=15/51.163/7.975"
+              href="https://www.openstreetmap.org/?mlat=51.182&mlon=8.030#map=15/51.182/8.030"
               target="_blank"
               rel="noopener noreferrer"
               className="underline hover:text-earth-600"
