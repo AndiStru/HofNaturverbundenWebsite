@@ -1,10 +1,8 @@
-import Link from "next/link";
 import SiteImage from "@/components/ui/SiteImage";
 import HeroSection from "@/components/ui/HeroSection";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Card from "@/components/ui/Card";
-import BlogList from "@/components/blog/BlogList";
-import { getAllPosts } from "@/lib/blog";
+import InstagramFeed from "@/components/ui/InstagramFeed";
 
 const values = [
   {
@@ -61,7 +59,6 @@ const quickLinks = [
 ];
 
 export default function HomePage() {
-  const latestPosts = getAllPosts().slice(0, 3);
 
   return (
     <>
@@ -135,20 +132,20 @@ export default function HomePage() {
         </div>
       </section>
 
-      {latestPosts.length > 0 && (
-        <section className="py-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-end justify-between mb-10">
-            <SectionHeading title="Aus dem Hofblog" />
-            <Link
-              href="/blog"
-              className="text-sm font-medium text-forest-600 hover:text-forest-700 transition-colors hidden md:block"
-            >
-              Alle Beiträge →
-            </Link>
-          </div>
-          <BlogList posts={latestPosts} />
-        </section>
-      )}
+      <section className="py-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-end justify-between mb-10">
+          <SectionHeading title="Auf Instagram" />
+          <a
+            href="https://www.instagram.com/hofnaturverbunden"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-medium text-forest-600 hover:text-forest-700 transition-colors hidden md:block"
+          >
+            @hofnaturverbunden →
+          </a>
+        </div>
+        <InstagramFeed />
+      </section>
     </>
   );
 }
