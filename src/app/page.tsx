@@ -1,3 +1,4 @@
+import Link from "next/link";
 import SiteImage from "@/components/ui/SiteImage";
 import HeroSection from "@/components/ui/HeroSection";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -138,12 +139,12 @@ export default function HomePage() {
         <section className="py-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-end justify-between mb-10">
             <SectionHeading title="Aus dem Hofblog" />
-            <a
+            <Link
               href="/blog"
               className="text-sm font-medium text-forest-600 hover:text-forest-700 transition-colors hidden md:block"
             >
               Alle Beiträge →
-            </a>
+            </Link>
           </div>
           <BlogList posts={latestPosts} />
         </section>
