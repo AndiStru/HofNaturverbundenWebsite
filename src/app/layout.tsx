@@ -19,7 +19,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Hof Naturverbunden",
   description:
-    "Natürlich angebaut, regional und mit Herz. Willkommen auf dem Hof Naturverbunden.",
+    "Therapie- und Begegnungshof im Sauerland. Schafwanderungen, Woll- und Filzkurse, tiergestützte Intervention und achtsame Auszeiten mit Walliser Schwarznasen.",
 };
 
 export default function RootLayout({

@@ -1,3 +1,4 @@
+import SiteImage from "./SiteImage";
 import Button from "./Button";
 
 interface HeroSectionProps {
@@ -28,10 +29,12 @@ export default function HeroSection({
   return (
     <section className={`relative flex items-center ${heightCls} overflow-hidden`}>
       {imageSrc ? (
-        <img
+        <SiteImage
           src={imageSrc}
           alt={imageAlt ?? ""}
-          className="absolute inset-0 w-full h-full object-cover"
+          fill
+          className="object-cover"
+          priority
         />
       ) : (
         <div className="absolute inset-0 bg-gradient-to-br from-forest-700 via-forest-500 to-earth-700" />

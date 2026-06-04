@@ -10,7 +10,7 @@ export default function Footer() {
               Hof Naturverbunden
             </h3>
             <p className="text-sm leading-relaxed text-earth-200">
-              Natürlich angebaut, regional und mit Herz. Wir freuen uns auf Ihren Besuch.
+              Therapie- und Begegnungshof im Sauerland. Schafwanderungen, Wollkurse und tiergestützte Begegnungen mit Walliser Schwarznasen.
             </p>
           </div>
 
@@ -21,7 +21,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               {[
                 { href: "/", label: "Startseite" },
-                { href: "/produkte", label: "Produkte" },
+                { href: "/angebote", label: "Angebote" },
                 { href: "/blog", label: "Blog" },
                 { href: "/kontakt", label: "Kontakt" },
               ].map(({ href, label }) => (

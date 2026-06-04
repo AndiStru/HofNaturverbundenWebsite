@@ -4,7 +4,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 
 export const metadata: Metadata = {
   title: "Kontakt & Anfahrt | Hof Naturverbunden",
-  description: "Nehmen Sie Kontakt mit uns auf oder besuchen Sie uns auf dem Hof.",
+  description: "Nehmen Sie Kontakt mit uns auf oder besuchen Sie uns auf dem Hof in Finnentrop-Deutmecke im Sauerland.",
 };
 
 export default function KontaktPage() {
@@ -12,7 +12,7 @@ export default function KontaktPage() {
     <>
       <HeroSection
         title="Kontakt & Anfahrt"
-        subtitle="Wir freuen uns auf Ihre Nachricht und auf Ihren Besuch."
+        subtitle="Wir freuen uns auf Ihre Nachricht – am liebsten per WhatsApp oder E-Mail."
         size="medium"
       />
 
@@ -32,8 +32,8 @@ export default function KontaktPage() {
                 <div>
                   <p className="font-medium text-earth-900">Adresse</p>
                   <p className="text-earth-500 text-sm mt-1">
-                    Musterstraße 1<br />
-                    12345 Musterort<br />
+                    Riedmeckerstraße 1<br />
+                    57413 Finnentrop-Deutmecke<br />
                     Deutschland
                   </p>
                 </div>
@@ -46,10 +46,15 @@ export default function KontaktPage() {
                   </svg>
                 </div>
                 <div>
-                  <p className="font-medium text-earth-900">Telefon</p>
+                  <p className="font-medium text-earth-900">WhatsApp</p>
                   <p className="text-earth-500 text-sm mt-1">
-                    <a href="tel:+491234567890" className="hover:text-forest-600 transition-colors">
-                      +49 123 456 7890
+                    <a
+                      href="https://wa.me/491759970051"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-forest-600 transition-colors"
+                    >
+                      +49 175 9970051
                     </a>
                   </p>
                 </div>
@@ -75,16 +80,23 @@ export default function KontaktPage() {
               <div className="flex gap-4">
                 <div className="w-10 h-10 rounded-full bg-forest-100 flex items-center justify-center flex-shrink-0">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-forest-600" strokeLinecap="round">
-                    <circle cx="12" cy="12" r="10" />
-                    <polyline points="12 6 12 12 16 14" />
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
                   </svg>
                 </div>
                 <div>
-                  <p className="font-medium text-earth-900">Öffnungszeiten</p>
-                  <div className="text-earth-500 text-sm mt-1 space-y-0.5">
-                    <p>Samstag: 9:00 – 13:00 Uhr</p>
-                    <p>Oder nach Vereinbarung</p>
-                  </div>
+                  <p className="font-medium text-earth-900">Instagram</p>
+                  <p className="text-earth-500 text-sm mt-1">
+                    <a
+                      href="https://www.instagram.com/hofnaturverbunden"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-forest-600 transition-colors"
+                    >
+                      @hofnaturverbunden
+                    </a>
+                  </p>
                 </div>
               </div>
             </div>
@@ -152,20 +164,21 @@ export default function KontaktPage() {
         <div className="mt-16 rounded-2xl overflow-hidden border border-earth-100">
           <iframe
             title="Karte Hof Naturverbunden"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=10.0%2C51.0%2C11.0%2C52.0&layer=mapnik"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=7.94%2C51.14%2C8.02%2C51.19&layer=mapnik&marker=51.163%2C7.975"
             className="w-full h-64 sm:h-80"
             loading="lazy"
           />
           <div className="p-3 bg-earth-50 text-xs text-earth-400 text-center">
-            Bitte aktualisieren Sie die Kartenpinposition mit Ihrer tatsächlichen Adresse.{" "}
+            Riedmeckerstraße 1, 57413 Finnentrop-Deutmecke ·{" "}
             <a
-              href="https://www.openstreetmap.org"
+              href="https://www.openstreetmap.org/?mlat=51.163&mlon=7.975#map=15/51.163/7.975"
               target="_blank"
               rel="noopener noreferrer"
               className="underline hover:text-earth-600"
             >
-              © OpenStreetMap-Mitwirkende
-            </a>
+              Größere Karte anzeigen
+            </a>{" "}
+            · © OpenStreetMap-Mitwirkende
           </div>
         </div>
       </section>

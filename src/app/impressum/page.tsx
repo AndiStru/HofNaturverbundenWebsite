@@ -13,9 +13,9 @@ export default function ImpressumPage() {
         <section>
           <h2 className="font-serif text-xl font-semibold text-earth-900 mb-3">Angaben gemäß § 5 TMG</h2>
           <p>
-            Vorname Nachname<br />
-            Musterstraße 1<br />
-            12345 Musterort<br />
+            Jana Struwe<br />
+            Riedmeckerstraße 1<br />
+            57413 Finnentrop-Deutmecke<br />
             Deutschland
           </p>
         </section>
@@ -23,7 +23,7 @@ export default function ImpressumPage() {
         <section>
           <h2 className="font-serif text-xl font-semibold text-earth-900 mb-3">Kontakt</h2>
           <p>
-            Telefon: +49 123 456 7890<br />
+            WhatsApp: +49 175 9970051<br />
             E-Mail: info@hof-naturverbunden.de
           </p>
         </section>
@@ -48,10 +48,6 @@ export default function ImpressumPage() {
             Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
           </p>
         </section>
-
-        <p className="text-xs text-earth-400 pt-4 border-t border-earth-100">
-          Bitte ersetzen Sie die Platzhalterangaben durch Ihre tatsächlichen Daten.
-        </p>
       </div>
     </div>
   );

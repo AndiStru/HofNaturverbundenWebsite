@@ -1,4 +1,5 @@
 import Link from "next/link";
+import SiteImage from "./SiteImage";
 import { ReactNode } from "react";
 
 interface CardProps {
@@ -23,11 +24,13 @@ export default function Card({
   const content = (
     <div className="bg-white rounded-2xl overflow-hidden border border-earth-100 hover:border-forest-200 hover:shadow-md transition-all duration-200 h-full flex flex-col">
       {imageSrc && (
-        <div className="aspect-video overflow-hidden">
-          <img
+        <div className="aspect-video overflow-hidden relative">
+          <SiteImage
             src={imageSrc}
             alt={imageAlt ?? title}
-            className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+            fill
+            className="object-cover transition-transform duration-300 hover:scale-105"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
         </div>
       )}

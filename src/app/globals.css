@@ -2,29 +2,36 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --color-earth-50: #faf6f0;
-  --color-earth-100: #f0e8d8;
-  --color-earth-200: #ddd0b8;
-  --color-earth-500: #8b7355;
-  --color-earth-700: #5c4a32;
-  --color-earth-900: #2d2015;
+  /* Sage green palette — brand primary #859E91, light sage #BDCAC3, accent #61CE70 */
+  --color-forest-100: #ECF1EE;
+  --color-forest-200: #D1DDD8;
+  --color-forest-300: #B8C9C1;
+  --color-forest-500: #859E91;
+  --color-forest-600: #6D8B7B;
+  --color-forest-700: #557366;
+  --color-forest-900: #1E3329;
 
-  --color-forest-100: #e8f0e4;
-  --color-forest-300: #7aaa6a;
-  --color-forest-500: #4a7c3f;
-  --color-forest-700: #2d5a24;
-  --color-forest-900: #1a3815;
+  /* Neutral with sage undertone — body text #7A7A7A */
+  --color-earth-50:  #F4F7F5;
+  --color-earth-100: #E5EDEA;
+  --color-earth-200: #C8D3CE;
+  --color-earth-400: #97A5A0;
+  --color-earth-500: #7A7A7A;
+  --color-earth-600: #5E6461;
+  --color-earth-700: #404744;
+  --color-earth-800: #2A3330;
+  --color-earth-900: #1A2620;
 
-  --color-warm-white: #fdf9f3;
-  --color-cream: #f5ede0;
+  --color-warm-white: #FAFCFB;
+  --color-cream: #EDF3F0;
 
   --font-serif: var(--font-lora), "Georgia", serif;
   --font-sans: var(--font-inter), system-ui, sans-serif;
 }
 
 :root {
-  --background: #fdf9f3;
-  --foreground: #2d2015;
+  --background: #FAFCFB;
+  --foreground: #1A2620;
 }
 
 body {
