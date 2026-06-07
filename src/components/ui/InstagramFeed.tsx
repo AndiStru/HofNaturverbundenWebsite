@@ -1,41 +1,80 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
-// Nach der Registrierung auf behold.so die Feed-ID hier eintragen:
-const FEED_ID = "DEIN_BEHOLD_FEED_ID";
+const FEED_ID = "SJy4H1bI7sfgFCJzyWEF";
+
+interface BeholdPost {
+  id: string;
+  mediaType: "IMAGE" | "VIDEO" | "CAROUSEL_ALBUM";
+  mediaUrl: string;
+  thumbnailUrl?: string;
+  permalink: string;
+  caption?: string;
+}
 
 export default function InstagramFeed() {
+  const [posts, setPosts] = useState<BeholdPost[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
+
   useEffect(() => {
-    if (FEED_ID === "DEIN_BEHOLD_FEED_ID") return;
-    const script = document.createElement("script");
-    script.src = "https://static.behold.so/widget.js";
-    script.async = true;
-    document.body.appendChild(script);
-    return () => {
-      document.body.removeChild(script);
-    };
+    fetch(`https://feeds.behold.so/${FEED_ID}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setPosts((data.posts ?? data).slice(0, 9));
+        setLoading(false);
+      })
+      .catch(() => {
+        setError(true);
+        setLoading(false);
+      });
   }, []);
 
-  if (FEED_ID === "DEIN_BEHOLD_FEED_ID") {
+  if (loading) {
     return (
-      <div className="rounded-2xl border border-dashed border-earth-200 bg-earth-50 py-16 text-center text-earth-500">
-        <svg className="mx-auto mb-4 text-earth-300" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
-          <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-        </svg>
-        <p className="font-medium text-earth-700 mb-1">Instagram-Feed</p>
-        <p className="text-sm">
-          Kostenlos einrichten auf{" "}
-          <a href="https://behold.so" target="_blank" rel="noopener noreferrer" className="text-forest-600 underline">
-            behold.so
-          </a>
-          {" "}→ Feed-ID in <code className="bg-earth-100 px-1 rounded">InstagramFeed.tsx</code> eintragen
-        </p>
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+        {Array.from({ length: 9 }).map((_, i) => (
+          <div key={i} className="aspect-square bg-earth-100 rounded-xl animate-pulse" />
+        ))}
       </div>
     );
   }
 
-  return <div id={`behold-widget-${FEED_ID}`} />;
+  if (error || posts.length === 0) return null;
+
+  return (
+    <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+      {posts.map((post) => {
+        const imgSrc = post.mediaType === "VIDEO"
+          ? (post.thumbnailUrl ?? post.mediaUrl)
+          : post.mediaUrl;
+        return (
+          <a
+            key={post.id}
+            href={post.permalink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative block aspect-square overflow-hidden rounded-xl bg-earth-100"
+          >
+            <img
+              src={imgSrc}
+              alt={post.caption?.slice(0, 80) ?? "Instagram-Beitrag"}
+              className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+            />
+            {post.mediaType === "VIDEO" && (
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-black/40">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+              </div>
+            )}
+            <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/10" />
+          </a>
+        );
+      })}
+    </div>
+  );
 }
