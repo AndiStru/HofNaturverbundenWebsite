@@ -1,0 +1,34 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Next.js: Server-side debuggen",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run dev",
+      "serverReadyAction": {
+        "pattern": "Local:\\s+(https?://\\S+)",
+        "uriFormat": "%s",
+        "action": "openExternally"
+      }
+    },
+    {
+      "name": "Next.js: Client-side debuggen (Chrome)",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:3000/HofNaturverbundenWebsite",
+      "webRoot": "${workspaceFolder}/src"
+    },
+    {
+      "name": "Next.js: Full-Stack debuggen",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run dev",
+      "serverReadyAction": {
+        "pattern": "Local:\\s+(https?://\\S+)",
+        "uriFormat": "%s/HofNaturverbundenWebsite",
+        "action": "debugWithChrome"
+      }
+    }
+  ]
+}
