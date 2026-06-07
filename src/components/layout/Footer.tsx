@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
             <h3 className="font-serif font-semibold text-warm-white text-lg mb-3">
-              Hof Naturverbunden
+              Hof-Naturverbunden
             </h3>
             <p className="text-sm leading-relaxed text-earth-200">
               Therapie- und Begegnungshof im Sauerland. Schafwanderungen, Wollkurse und tiergestützte Begegnungen mit Walliser Schwarznasen.
@@ -62,7 +62,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-earth-700 pt-6 text-center text-xs text-earth-500">
-          © {new Date().getFullYear()} Hof Naturverbunden. Alle Rechte vorbehalten.
+          © {new Date().getFullYear()} Hof-Naturverbunden. Alle Rechte vorbehalten.
         </div>
       </div>
     </footer>

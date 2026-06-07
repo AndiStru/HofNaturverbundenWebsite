@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Datenschutzerklärung | Hof Naturverbunden",
+  title: "Datenschutzerklärung | Hof-Naturverbunden",
 };
 
 export default function DatenschutzPage() {

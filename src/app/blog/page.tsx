@@ -1,12 +1,12 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import HeroSection from "@/components/ui/HeroSection";
 import SectionHeading from "@/components/ui/SectionHeading";
 import BlogList from "@/components/blog/BlogList";
 import { getAllPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Blog | Hof Naturverbunden",
-  description: "Berichte, Einblicke und Tipps aus dem Alltag auf dem Hof Naturverbunden.",
+  title: "Blog | Hof-Naturverbunden",
+  description: "Berichte, Einblicke und Tipps aus dem Alltag auf dem Hof-Naturverbunden.",
 };
 
 export default function BlogPage() {

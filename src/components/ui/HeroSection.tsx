@@ -1,8 +1,9 @@
+import type { ReactNode } from "react";
 import SiteImage from "./SiteImage";
 import Button from "./Button";
 
 interface HeroSectionProps {
-  title: string;
+  title: ReactNode;
   subtitle?: string;
   ctaLabel?: string;
   ctaHref?: string;
@@ -54,7 +55,7 @@ export default function HeroSection({
           {(ctaLabel || secondaryLabel) && (
             <div className="flex flex-wrap gap-3">
               {ctaLabel && ctaHref && (
-                <Button href={ctaHref} variant="primary" className="bg-warm-white text-earth-900 hover:bg-earth-100 focus:ring-white">
+                <Button href={ctaHref} variant="ghost" className="text-white border border-white/50 hover:bg-white/10">
                   {ctaLabel}
                 </Button>
               )}

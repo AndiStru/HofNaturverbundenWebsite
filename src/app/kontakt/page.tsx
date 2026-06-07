@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import HeroSection from "@/components/ui/HeroSection";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 export const metadata: Metadata = {
-  title: "Kontakt & Anfahrt | Hof Naturverbunden",
+  title: "Kontakt & Anfahrt | Hof-Naturverbunden",
   description: "Nehmen Sie Kontakt mit uns auf oder besuchen Sie uns auf dem Hof in Finnentrop-Deutmecke im Sauerland.",
 };
 
@@ -100,7 +100,7 @@ export default function KontaktPage() {
 
         <div className="mt-16 rounded-2xl overflow-hidden border border-earth-100">
           <iframe
-            title="Karte Hof Naturverbunden"
+            title="Karte Hof-Naturverbunden"
             src="https://www.openstreetmap.org/export/embed.html?bbox=7.990%2C51.157%2C8.070%2C51.207&layer=mapnik&marker=51.182%2C8.030"
             className="w-full h-72 sm:h-96"
             loading="lazy"

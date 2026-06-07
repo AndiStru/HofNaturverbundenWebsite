@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Impressum | Hof Naturverbunden",
+  title: "Impressum | Hof-Naturverbunden",
 };
 
 export default function ImpressumPage() {

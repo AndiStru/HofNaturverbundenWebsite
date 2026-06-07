@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import SiteImage from "@/components/ui/SiteImage";
@@ -13,14 +13,14 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group">
           <SiteImage
-            src="/images/icon.jpg"
-            alt="Hof Naturverbunden Logo"
-            width={36}
-            height={36}
-            className="rounded-full object-cover"
+            src="/images/Logo-ohne-Schrift.png"
+            alt="Hof-Naturverbunden Logo"
+            width={44}
+            height={44}
+            className="object-contain"
           />
-          <span className="font-serif font-semibold text-lg text-earth-900 group-hover:text-forest-700 transition-colors">
-            Hof Naturverbunden
+          <span className="font-serif font-semibold text-xl text-earth-900 group-hover:text-forest-700 transition-colors">
+            Hof-Naturverbunden
           </span>
         </Link>
 

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Lora, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
@@ -18,7 +18,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Hof Naturverbunden",
+  title: "Hof-Naturverbunden",
   description:
     "Therapie- und Begegnungshof im Sauerland. Schafwanderungen, Woll- und Filzkurse, tiergestützte Intervention und achtsame Auszeiten mit Walliser Schwarznasen.",
 };

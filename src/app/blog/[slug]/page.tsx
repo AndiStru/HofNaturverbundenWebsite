@@ -18,11 +18,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   try {
     const post = getPostBySlug(slug);
     return {
-      title: `${post.title} | Hof Naturverbunden`,
+      title: `${post.title} | Hof-Naturverbunden`,
       description: post.excerpt,
     };
   } catch {
-    return { title: "Beitrag nicht gefunden | Hof Naturverbunden" };
+    return { title: "Beitrag nicht gefunden | Hof-Naturverbunden" };
   }
 }
 

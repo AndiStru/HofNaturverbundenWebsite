@@ -1,4 +1,4 @@
-import SiteImage from "@/components/ui/SiteImage";
+﻿import SiteImage from "@/components/ui/SiteImage";
 import HeroSection from "@/components/ui/HeroSection";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Card from "@/components/ui/Card";
@@ -63,14 +63,14 @@ export default function HomePage() {
   return (
     <>
       <HeroSection
-        title="Schafen begegnen auf dem Hof Naturverbunden"
+        title={<>Schafen begegnen<br /><span className="whitespace-nowrap">auf dem Hof-Naturverbunden</span></>}
         subtitle="Erleben Sie besondere Momente mit unseren Walliser Schwarznasen – bei Schafwanderungen, kreativen Wollkursen oder achtsamen Auszeiten im Sauerland."
         ctaLabel="Unsere Angebote"
         ctaHref="/angebote"
         secondaryLabel="Mehr erfahren"
         secondaryHref="#ueber-uns"
-        imageSrc="/images/hof-photo.jpg"
-        imageAlt="Hof Naturverbunden im Sauerland"
+        imageSrc="/images/Eiche und Schafweide Hof-Naturverbunden.jpg"
+        imageAlt="Hof-Naturverbunden im Sauerland"
       />
 
       <section id="ueber-uns" className="py-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -78,22 +78,25 @@ export default function HomePage() {
           <div>
             <SectionHeading
               title="Über uns"
-              subtitle="Ein Therapie- und Begegnungshof im Herzen des Sauerlandes."
+              subtitle="Unser Therapie- und Begegnungshof im Sauerland."
             />
             <p className="mt-6 text-earth-700 leading-relaxed">
-              Jana Struwe ist Ergotherapeutin und ISAAT-zertifizierte Fachkraft für tiergestützte Intervention. Gemeinsam mit ihrer Hundedame Wilma, der quirligen Jette und einer Herde Walliser Schwarznasen lädt sie Menschen ein, Natur und Tierbegegnung neu zu erleben.
+              Jana Struwe ist Ergotherapeutin und ISAAT-zertifizierte Fachkraft für tiergestützte Intervention. Erlebt auf unserem Hof „Naturverbunden“ besondere Momente mit Schafen und ihrer wundervollen Wolle. Bei Schafwanderungen, kreativen Woll- und Filzkursen oder einer kleinen Auszeit vom Alltag entstehen Begegnungen, die entschleunigen, Freude schenken und lange in Erinnerung bleiben.
+
+Für Kinder, Erwachsene, Familien und Gruppen schaffen wir Raum für Naturerlebnisse, Verbundenheit und wertvolle gemeinsame Zeit. Wir freuen uns auf Euch!.
             </p>
             <p className="mt-4 text-earth-700 leading-relaxed">
               Unser denkmalgeschützter Hof aus dem Jahr 1838 liegt in Finnentrop-Deutmecke im Sauerland – ein Ort, an dem Begegnung, Ruhe und Kreativität ihren Raum haben. Hier ist jedes Erlebnis ein bisschen besonders.
             </p>
           </div>
-          <div className="rounded-3xl overflow-hidden aspect-square relative">
+          <div className="rounded-3xl overflow-hidden">
             <SiteImage
-              src="/images/jana-struwe.jpg"
-              alt="Jana Struwe, Inhaberin Hof Naturverbunden"
-              fill
-              className="object-cover"
+              src="/images/Jana Struwe Inhaberin Hof-Naturverbunden.jpg"
+              alt="Jana Struwe, Inhaberin Hof-Naturverbunden"
+              width={0}
+              height={0}
               sizes="(max-width: 1024px) 100vw, 50vw"
+              className="w-full h-auto"
             />
           </div>
         </div>
