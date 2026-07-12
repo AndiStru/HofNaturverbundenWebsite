@@ -3,6 +3,8 @@ import HeroSection from "@/components/ui/HeroSection";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Card from "@/components/ui/Card";
 import InstagramFeed from "@/components/ui/InstagramFeed";
+import TermineTabelle from "@/components/ui/TermineTabelle";
+import { angebote } from "@/lib/angebote";
 
 const values = [
   {
@@ -63,7 +65,7 @@ export default function HomePage() {
   return (
     <>
       <HeroSection
-        title={<>Schafen begegnen<br /><span className="whitespace-nowrap">auf dem Hof-Naturverbunden</span></>}
+        title={<>Schafen begegnen<br />auf dem Hof-Naturverbunden</>}
         subtitle="Erleben Sie besondere Momente mit unseren Walliser Schwarznasen – bei Schafwanderungen, kreativen Wollkursen oder achtsamen Auszeiten im Sauerland."
         ctaLabel="Unsere Angebote"
         ctaHref="/angebote"
@@ -134,6 +136,38 @@ Für Kinder, Erwachsene, Familien und Gruppen schaffen wir Raum für Naturerlebn
           </div>
         </div>
       </section>
+
+      {(() => {
+        const alleTermine = angebote
+          .flatMap((a) =>
+            (a.termine ?? []).map((t) => ({
+              ...t,
+              angebot: a.title,
+              href: `/angebote/${a.slug}`,
+            }))
+          )
+          .sort((a, b) => {
+            const parse = (d: string) => {
+              const [day, month, year] = d.split(".");
+              return new Date(+year, +month - 1, +day).getTime();
+            };
+            return parse(a.datum) - parse(b.datum);
+          });
+
+        if (alleTermine.length === 0) return null;
+
+        return (
+          <section className="py-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <SectionHeading
+              title="Kommende Termine"
+              subtitle="Alle offenen Termine auf einen Blick – jetzt anmelden und dabei sein."
+            />
+            <div className="mt-10">
+              <TermineTabelle termine={alleTermine} />
+            </div>
+          </section>
+        );
+      })()}
 
       <section className="py-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-end justify-between mb-10">

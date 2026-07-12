@@ -35,7 +35,7 @@ export default function HeroSection({
           alt={imageAlt ?? ""}
           fill
           className="object-cover"
-          priority
+          preload
         />
       ) : (
         <div className="absolute inset-0 bg-gradient-to-br from-forest-700 via-forest-500 to-earth-700" />
@@ -44,7 +44,7 @@ export default function HeroSection({
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="max-w-2xl">
-          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-semibold text-white leading-tight mb-6">
+          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-semibold text-white leading-tight mb-6 break-words">
             {title}
           </h1>
           {subtitle && (
